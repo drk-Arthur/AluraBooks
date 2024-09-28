@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+@import url(styles/header.css);
+@import url(styles/banner.css);
+@import url(styles/carrossel.css);
+@import url(styles/topicos.css);
+@import url(styles/contato.css);
+
+:root {
+    --cor-de-fundo: #ebecee;
+    --branco: #ffffff;
+    --laranja: #eb9b00;
+    --azul-degrade: linear-gradient(97.54deg, #002f52 35.49%, #326589 165.37%);
+    --fonte-principal: "Poppins";
+    --fonte-secundaria: "Josefin Sans";
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.rodapé {
+    background-color: #F9F9F9;
+    padding: 1.5em;
+    font-family: "Poppins";
+    font-size: 16px;
+    border-top: 1px solid black;
+}
+
+.lista-rodapé {
+    display: none;
+}
+
+@media screen and (min-width:1024px) {
+    .rodapé {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 3.5em;
+    }
+
+    .rodapé h2 {
+        font-size: 24px;
+        font-weight: 400;
+    }
+
+    .lista-rodapé {
+            display: block;
+    }
+
+    .lista-rodapé-titulo {
+        font-size: 14px;
+        font-family: "Poppins";
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #858585;
+
+        margin-bottom: 2em;
+    }
+
+    .lista-rodapé-item {
+        display: flex;
+        align-items: center;
+
+        font-size: 14px;
+        font-family: "Poppins";
+        color: #474646;
+        gap: 1em;
+        margin-bottom: 1em;
+
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width:1728px) {
+    .rodapé {
+        justify-content: space-around;
+        padding: 4em;
+    }
+
+    .lista-rodapé {
+        border-left: 1px solid #474646;
+        padding-left: 1.5em;
+    }
+}
